@@ -2,16 +2,13 @@ const container = document.querySelector('#container')
 let grid_size;
 
 gridButton = document.querySelector('#grid-size')
-// gridButton.addEventListener('click', () => {
-//     grid_size = prompt("What's the grid size? (LESS THAN 100)");
-// })
 
 gridButton.addEventListener('click', getGrid)
 
 // prompts grid, clears and makes grid, listens for mouseover
 function getGrid() {
     do {
-        grid_size = prompt("What's the grid size? (LESS THAN 100)");
+        grid_size = Math.floor(prompt("What's the grid size? (LESS THAN 100)"));
     } while (grid_size > 100);
 
     removeAllChildNodes(container);
