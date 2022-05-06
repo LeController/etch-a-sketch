@@ -30,9 +30,6 @@ function getGrid() {
         let r = Math.floor(Math.random()*255);
         let g = Math.floor(Math.random()*255);
         let b = Math.floor(Math.random()*255);
-        console.log(r)
-        console.log(g)
-        console.log(b)
         // square.classList.add('on');
         square.setAttribute('style', `background-color: rgb(${r},${g},${b});`)
     });
