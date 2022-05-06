@@ -8,11 +8,10 @@ gridButton = document.querySelector('#grid-size')
 
 gridButton.addEventListener('click', getGrid)
 
-
+// prompts grid, clears and makes grid, listens for mouseover
 function getGrid() {
     do {
         grid_size = prompt("What's the grid size? (LESS THAN 100)");
-        console.log(grid_size)
     } while (grid_size > 100);
 
     removeAllChildNodes(container);
@@ -27,9 +26,15 @@ function getGrid() {
 
     const squares = document.querySelectorAll('.square');
     squares.forEach((square) => {
-    
     square.addEventListener('mouseover', () => {
-        square.classList.add('on');
+        let r = Math.floor(Math.random()*255);
+        let g = Math.floor(Math.random()*255);
+        let b = Math.floor(Math.random()*255);
+        console.log(r)
+        console.log(g)
+        console.log(b)
+        // square.classList.add('on');
+        square.setAttribute('style', `background-color: rgb(${r},${g},${b});`)
     });
 });
 }
@@ -40,12 +45,5 @@ function removeAllChildNodes(parent) {
     }
 }
 
-// const squares = document.querySelectorAll('.square');
-// squares.forEach((square) => {
-    
-//     square.addEventListener('mouseover', () => {
-//         square.classList.add('on');
-//     });
-// });
 
 
