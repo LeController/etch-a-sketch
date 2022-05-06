@@ -9,7 +9,7 @@ gridButton.addEventListener('click', getGrid)
 function getGrid() {
     do {
         grid_size = Math.floor(prompt("What's the grid size? (LESS THAN 100)"));
-    } while (grid_size > 100);
+    } while (grid_size > 100 || grid_size < 1);
 
     removeAllChildNodes(container);
 
