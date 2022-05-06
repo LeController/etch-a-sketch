@@ -1,18 +1,19 @@
 body {
-margin: auto auto;
+    align-items: center;
 }
 
 #container {
-    display: flex;
-    padding: 10px;
+    display: grid;
+    width: 95vh;
+    height: 95vh;
+    grid-template-columns: repeat(16, 1fr);
 }
 
 .square {
     background-color: rgb(219, 219, 219);
-    width: 5vw;
-    height: 5vw;
-    border-style: dotted;
+    flex-basis: 100%;
 }
+
 
 .square:hover {
     background-color: yellow;
