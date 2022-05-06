@@ -24,6 +24,14 @@ function getGrid() {
         container.setAttribute('style', `grid-template-columns: repeat(${grid_size}, 1fr);`)   
         container.appendChild(div);
     }
+
+    const squares = document.querySelectorAll('.square');
+    squares.forEach((square) => {
+    
+    square.addEventListener('mouseover', () => {
+        square.classList.add('on');
+    });
+});
 }
 
 function removeAllChildNodes(parent) {
@@ -32,12 +40,12 @@ function removeAllChildNodes(parent) {
     }
 }
 
-const squares = document.querySelectorAll('.square');
-squares.forEach((square) => {
+// const squares = document.querySelectorAll('.square');
+// squares.forEach((square) => {
     
-    square.addEventListener('mouseover', () => {
-        square.classList.add('on');
-    });
-});
+//     square.addEventListener('mouseover', () => {
+//         square.classList.add('on');
+//     });
+// });
 
 
