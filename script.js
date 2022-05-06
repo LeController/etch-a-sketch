@@ -10,7 +10,6 @@ for (let i = 1; i <= 16 ; i++) {
         const div2 =  document.createElement('div')
         div2.classList.add("square")
         div2.classList.add(`${i}.${j}`)
-        // div2.textContent = `${i}.${j}`
         div.appendChild(div2);
     }
 }
